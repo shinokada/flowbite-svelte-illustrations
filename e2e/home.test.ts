@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 const title = 'Flowbite Svelte Illustrations';
-const description = 'Free and open-source collection of SVG illustrations';
+const description = 'A collection of free and open-source collection of SVG illustrations.';
 const keywords = 'illustrations, svelte, flowbite-svelte, svg';
 const imgUrl = 'https://open-graph-vercel.vercel.app/api/flowbite-svelte-illustrations';
 

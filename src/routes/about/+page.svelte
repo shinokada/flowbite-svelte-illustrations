@@ -11,12 +11,9 @@
 		Accessibility,
 		TruckFastSolid,
 		Visualstudiocode,
-		TailwindSolid,
-		GlobeOutline,
 		MoonSolid,
 		info
 	} from 'runes-webkit';
-	import { A } from 'svelte-5-ui-lib';
 
 	const brand = {
 		title: `${removeHyphensAndCapitalize(__NAME__)}`,
@@ -40,9 +37,9 @@
 			icon_class: 'text-pink-500'
 		},
 		{
-			title: 'Accessible SVGs',
+			title: 'Accessible illustrations',
 			description:
-				'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
+				'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG illustrations.',
 			Icon: Accessibility,
 			icon_class: 'text-green-400'
 		},
@@ -115,7 +112,7 @@
 		>
 	</SupportBanner>
 
-	<h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
+	<h1 class="my-8 flex justify-center">Flowbite Svelte Illustrations</h1>
 
 	<HomeCards cards={filteredCards} />
 	<h2 class="my-8 flex justify-center">Info</h2>

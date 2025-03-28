@@ -1,9 +1,6 @@
 <script lang="ts">
 	import {
 		removeHyphensAndCapitalize,
-		HomeCards,
-		SupportBanner,
-		TechInfo,
 		BellActiveAltOutline,
 		InfoCircleOutline,
 		cards,

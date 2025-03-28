@@ -6,10 +6,10 @@ export const load = ({ url }) => {
 	const siteName = metaTitle('/', __NAME__);
 	const title = metaTitle(url.pathname, __NAME__);
 	const basicDesc =
-		'A collection of reusable Svelte components for building user interfaces for Runes';
+		'A collection of free and open-source collection of SVG illustrations.';
 	const description = metaDescription(url.pathname, basicDesc);
 	const image = metaImg(url.pathname, __NAME__);
-	const keywords = 'svelte, runes, webkit, ui, components';
+	const keywords = 'illustrations, svelte, flowbite-svelte, svg';
 
 	const layoutMetaTags: MetaProps = {
 		title,

@@ -20,7 +20,7 @@
 	defaultSize="140"
 	maxSize="200"
 	step="10"
-	title="Dark illustrations"
+	title="Dark Illustrations"
 	classDiv3="grid lg:grid-cols-3 grid-cols-2 gap-20 place-items-center "
 	icons={keyIcons}
 	threeTabs={false}
