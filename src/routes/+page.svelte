@@ -7,9 +7,18 @@
 		BellActiveAltOutline,
 		InfoCircleOutline,
 		cards,
-		info
+		info,
+		H2,
+		HighlightCompo
 	} from 'runes-webkit';
-	import { A } from 'svelte-5-ui-lib';
+	import { A, P } from 'svelte-5-ui-lib';
+	import { CreditCardPaymentReceipt } from '$lib';
+
+	const modules = import.meta.glob('./md/*.md', {
+    query: '?raw',
+    import: 'default',
+    eager: true
+  });
 
 	const brand = {
 		title: `${removeHyphensAndCapitalize(__NAME__)}`,
@@ -51,9 +60,33 @@
 	};
 </script>
 
-<div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
+<div class="mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
 	<h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
 	
-	<h2 class="my-8 flex justify-center">Installation</h2>
-	
+	<H2>Installation</H2>
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/installation.md'] as string} />
+
+	<H2>Requirements</H2>
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/requirements.md'] as string} />
+
+	<H2>How to use</H2>
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/how-to-use.md'] as string} />
+
+	<H2>Types</H2>
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/types.md'] as string} />
+
+	<H2>Props</H2>
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/props.md'] as string} />
+
+	<H2>Accessibility</H2>
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/accessibility.md'] as string} />
+  
+	<P>Checkout the following in the developer't tool.</P>
+	<CreditCardPaymentReceipt
+		title={{id: "my-title", title:"Your title here"}}
+		desc={{id:"my-desc", desc:"Description here"}}
+	/>
+
+	<HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/title-output.md'] as string} />
+
 </div>

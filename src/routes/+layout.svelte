@@ -100,7 +100,7 @@
 			return url.startsWith(allowedUrl);
 		});
 	}
-	let urlsToIncludeSwitcher = ['/guide', '/guide2', '/how-to-use', '/quick-start'];
+	let urlsToIncludeSwitcher = ['/guide', '/', '/how-to-use', '/quick-start'];
 	let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
 	// dropdown
 	let dropdown = uiHelpers();

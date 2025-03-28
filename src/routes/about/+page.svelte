@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Component } from 'svelte';
 	import {
 		removeHyphensAndCapitalize,
 		HomeCards,
@@ -6,7 +7,13 @@
 		TechInfo,
 		BellActiveAltOutline,
 		InfoCircleOutline,
-		cards,
+		BadgeCheckOutline,
+		Accessibility,
+		TruckFastSolid,
+		Visualstudiocode,
+		TailwindSolid,
+		GlobeOutline,
+		MoonSolid,
 		info
 	} from 'runes-webkit';
 	import { A } from 'svelte-5-ui-lib';
@@ -18,6 +25,47 @@
 		icon_class: 'text-blue-500'
 	};
 
+	interface CardTpye {
+	title: string;
+	description: string;
+	Icon: Component;
+	icon_class: string;
+}
+
+	const cards: CardTpye[] = [
+	{
+		title: 'Svelte 5',
+		description: 'Svelte 5',
+		Icon: BadgeCheckOutline,
+		icon_class: 'text-pink-500'
+	},
+	{
+		title: 'Accessible SVGs',
+		description:
+			'A11y props, <code>title</code>, <code>desc</code>, and <code>ariaLabel</code> for accessible SVG icons.',
+		Icon: Accessibility,
+		icon_class: 'text-green-400'
+	},
+	{
+		title: 'Faster Compiling',
+		description: 'Import icons directly to optimize compilation speed and improve performance.',
+		Icon: TruckFastSolid,
+		icon_class: 'text-yellow-500'
+	},
+	{
+		title: 'IDE Support',
+		description:
+			'Hovering over a component name will display features, props, events, and more for an LSP-compatible editors.',
+		Icon: Visualstudiocode,
+		icon_class: 'text-amber-500'
+	},
+	{
+		title: 'Light/Dark mode',
+		description: 'Light and Dark illustrations.',
+		Icon: MoonSolid,
+		icon_class: 'text-emerald-200'
+	}
+];
 	const filteredCards = [brand, ...cards];
 
 	const originalSource = {

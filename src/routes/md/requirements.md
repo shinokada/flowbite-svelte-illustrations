@@ -1,0 +1,2 @@
+- Svelte 5
+- TailwindCSS 4
