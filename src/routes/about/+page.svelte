@@ -31,8 +31,8 @@
 
 	const cards: CardTpye[] = [
 		{
-			title: 'Svelte 5',
-			description: 'Svelte 5',
+			title: 'Requirements',
+			description: 'Svelte 5 and TailwindCSS 4',
 			Icon: BadgeCheckOutline,
 			icon_class: 'text-pink-500'
 		},
