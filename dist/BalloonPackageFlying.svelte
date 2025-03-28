@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { TitleType, DescType } from './types';
 	import type { SVGAttributes } from 'svelte/elements';
 	interface Props extends SVGAttributes<SVGElement> {
 		color1?: string;
@@ -9,6 +10,8 @@
 		ariaLabel?: string;
 		class?: string;
 		height?: string;
+		title?: TitleType;
+		desc?: DescType;
 	}
 
 	let {
@@ -18,10 +21,14 @@
 		color4 = '#c8d8fa',
 		color5 = '#d6e2fb',
 		ariaLabel = 'Balloon Package Flying',
-		class: className = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white',
+		class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
 		height = '100',
+		title,
+		desc,
 		...restProps
 	}: Props = $props();
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
@@ -34,18 +41,25 @@
 	xmlns="http://www.w3.org/2000/svg"
 	style={`height: ${height}`}
 	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	{...restProps}
 >
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
 	<path
 		d="M278 411H376.905H394C394 399.367 373.853 396.918 365.305 392.633C356.758 388.347 351.874 381 340.884 381C329.895 381 317.074 395.694 302.421 396.918C290.699 397.898 281.256 406.714 278 411Z"
-		fill="#d6e2fb"
+		fill={color5}
 		fill-opacity="0.6"
 	/>
 	<path
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M168.025 452.826L184.978 389.558L186.909 390.076L169.957 453.344L168.025 452.826Z"
-		fill="#c8d8fa"
+		fill={color4}
 	/>
 	<path
 		fill-rule="evenodd"
@@ -57,7 +71,7 @@
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M214.384 396.738L215.459 398.425L178.777 421.802L198.856 460.388L197.082 461.311L176.157 421.1L214.384 396.738Z"
-		fill="#c8d8fa"
+		fill={color4}
 	/>
 	<path
 		fill-rule="evenodd"
@@ -69,7 +83,7 @@
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M157.853 381.591L156.079 382.514L176.158 421.1L139.476 444.477L140.551 446.164L178.778 421.802L157.853 381.591Z"
-		fill="#c8d8fa"
+		fill={color4}
 	/>
 	<path
 		fill-rule="evenodd"
@@ -84,7 +98,7 @@
 		height="19"
 		rx="2"
 		transform="rotate(15 175.032 411.222)"
-		fill="#2563eb"
+		fill={color2}
 	/>
 	<rect
 		x="175.032"
@@ -99,7 +113,7 @@
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M185.134 362.165L149.567 352.635L149.38 352.585L149.276 352.422C137.81 334.549 121.304 303.062 108.32 266.461C95.3374 229.866 86.0931 188.176 89.6644 150.043C94.1343 102.315 121.143 69.4602 157.325 51.3142C193.49 33.1765 238.816 29.7315 279.99 40.764C321.164 51.7965 358.694 77.4428 380.945 111.233C403.207 145.039 410.17 186.996 390.177 230.565C374.203 265.375 345.353 296.857 315.812 322.058C286.267 347.263 256.353 366.313 237.488 376.058L237.316 376.147L237.129 376.097L195.764 365.013L185.134 362.165Z"
-		fill="#c8d8fa"
+		fill={color4}
 	/>
 	<path
 		fill-rule="evenodd"
@@ -109,7 +123,7 @@
 	/>
 	<path
 		d="M149.336 352.573C179.995 353.968 209.986 362.004 237.235 376.125L234.864 378.144C227.673 384.265 222.514 392.428 220.07 401.549L151.489 383.173C153.933 374.052 153.546 364.403 150.38 355.506L149.336 352.573Z"
-		fill="#c8d8fa"
+		fill={color4}
 	/>
 	<path
 		d="M149.336 352.573C179.995 353.968 209.986 362.004 237.235 376.125L234.864 378.144C227.673 384.265 222.514 392.428 220.07 401.549L151.489 383.173C153.933 374.052 153.546 364.403 150.38 355.506L149.336 352.573Z"
@@ -119,7 +133,7 @@
 		width="44"
 		height="69"
 		transform="matrix(-0.965926 -0.258819 -0.258819 0.965926 232.294 467.976)"
-		fill="#2563eb"
+		fill={color2}
 	/>
 	<rect
 		width="44"
@@ -133,7 +147,7 @@
 		width="80"
 		height="69"
 		transform="rotate(15 112.52 435.883)"
-		fill="#2563eb"
+		fill={color2}
 	/>
 	<rect
 		x="111.826"
@@ -142,7 +156,7 @@
 		height="19"
 		rx="2"
 		transform="rotate(15 111.826 477.108)"
-		fill="#d6e2fb"
+		fill={color5}
 	/>
 	<rect
 		x="112.395"
@@ -151,11 +165,11 @@
 		height="2"
 		rx="1"
 		transform="rotate(15 112.395 486.578)"
-		fill="#2563eb"
+		fill={color2}
 	/>
 	<path
 		d="M204.282 460.471L216.839 463.835L213.733 475.426C213.448 476.493 212.351 477.127 211.284 476.841L202.591 474.511C201.524 474.225 200.891 473.129 201.176 472.062L204.282 460.471Z"
-		fill="#c8d8fa"
+		fill={color4}
 		fill-opacity="0.2"
 	/>
 	<rect
@@ -165,11 +179,11 @@
 		height="2"
 		rx="1"
 		transform="rotate(15 111.359 490.441)"
-		fill="#2563eb"
+		fill={color2}
 	/>
 	<path
 		d="M116.5 39.5H35.5H21.5C21.5 30 38 28 45 24.5C52 21 56 15 65 15C74 15 84.5 27 96.5 28C106.1 28.8 113.833 36 116.5 39.5Z"
-		fill="#d6e2fb"
+		fill={color5}
 	/>
 	<defs>
 		<linearGradient
@@ -262,6 +276,8 @@
 @props:color4: any = '#c8d8fa';
 @props:color5: any = '#d6e2fb';
 @props:ariaLabel: any = 'Balloon Package Flying';
-@props:class: string = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white';
+@props:class: string = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white';
 @props:height: any = '100';
+@props:title: any;
+@props:desc: any;
 -->

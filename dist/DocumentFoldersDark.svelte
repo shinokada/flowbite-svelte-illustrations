@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { TitleType, DescType } from './types';
 	import type { SVGAttributes } from 'svelte/elements';
 	interface Props extends SVGAttributes<SVGElement> {
 		color1?: string;
@@ -12,6 +13,8 @@
 		ariaLabel?: string;
 		class?: string;
 		height?: string;
+		title?: TitleType;
+		desc?: DescType;
 	}
 
 	let {
@@ -24,10 +27,14 @@
 		color7 = '#c8d8fa',
 		color8 = '#d6e2fb',
 		ariaLabel = 'Document Folders Dark',
-		class: className = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white',
+		class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
 		height = '100',
+		title,
+		desc,
 		...restProps
 	}: Props = $props();
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
@@ -40,15 +47,22 @@
 	xmlns="http://www.w3.org/2000/svg"
 	style={`height: ${height}`}
 	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
 	{...restProps}
 >
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
 	<path
 		d="M572 274C572 425.326 449.326 548 298 548C146.674 548 24 425.326 24 274C24 122.674 146.674 0 298 0C449.326 0 572 122.674 572 274Z"
 		fill="url(#paint0_linear_411_1557)"
 	/>
 	<path
 		d="M502 390H435.5C468.7 326.8 559 273.333 600 254.5C574.4 317.3 524 371 502 390Z"
-		fill="#374151"
+		fill={color5}
 	/>
 	<path
 		d="M502 390H435.5C468.7 326.8 559 273.333 600 254.5C574.4 317.3 524 371 502 390Z"
@@ -57,14 +71,14 @@
 	/>
 	<path
 		d="M445.5 390H379C412.2 326.8 509 190.5 562 147.5C544.5 231 467.5 371 445.5 390Z"
-		fill="#374151"
+		fill={color5}
 	/>
 	<path
 		d="M445.5 390H379C412.2 326.8 509 190.5 562 147.5C544.5 231 467.5 371 445.5 390Z"
 		fill="url(#paint2_linear_411_1557)"
 		fill-opacity="0.7"
 	/>
-	<path d="M98 390H164.5C131.3 326.8 41 273.333 0 254.5C25.6 317.3 76 371 98 390Z" fill="#374151" />
+	<path d="M98 390H164.5C131.3 326.8 41 273.333 0 254.5C25.6 317.3 76 371 98 390Z" fill={color5} />
 	<path
 		d="M98 390H164.5C131.3 326.8 41 273.333 0 254.5C25.6 317.3 76 371 98 390Z"
 		fill="url(#paint3_linear_411_1557)"
@@ -72,7 +86,7 @@
 	/>
 	<path
 		d="M154.5 390H221C187.8 326.8 91 190.5 38 147.5C55.5 231 132.5 371 154.5 390Z"
-		fill="#374151"
+		fill={color5}
 	/>
 	<path
 		d="M154.5 390H221C187.8 326.8 91 190.5 38 147.5C55.5 231 132.5 371 154.5 390Z"
@@ -85,7 +99,7 @@
 		d="M546.773 389C503.303 482.878 408.257 548 298.002 548C187.746 548 92.7005 482.878 49.2305 389H546.773Z"
 		fill="url(#paint5_linear_411_1557)"
 	/>
-	<path d="M219 253H489L439 439H169L219 253Z" fill="#1F2A37" />
+	<path d="M219 253H489L439 439H169L219 253Z" fill={color2} />
 	<path
 		d="M219 253H489L439 439H169L219 253Z"
 		fill="url(#paint6_linear_411_1557)"
@@ -93,7 +107,7 @@
 	/>
 	<path
 		d="M205.672 139.85L269.855 154.39L275.301 177.156L461.433 219.324L425.86 376.345L165.459 317.352L205.672 139.85Z"
-		fill="#d6e2fb"
+		fill={color8}
 	/>
 	<path
 		d="M205.672 139.85L269.855 154.39L275.301 177.156L461.433 219.324L425.86 376.345L165.459 317.352L205.672 139.85Z"
@@ -103,11 +117,11 @@
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M247.819 164.266L213.197 156.422L213.639 154.471L248.261 162.315L247.819 164.266Z"
-		fill="#2563eb"
+		fill={color3}
 	/>
 	<path
 		d="M182.973 172.88L248.243 181.287L255.818 203.436L445.103 227.815L424.536 387.496L159.724 353.389L182.973 172.88Z"
-		fill="#d6e2fb"
+		fill={color8}
 	/>
 	<path
 		d="M182.973 172.88L248.243 181.287L255.818 203.436L445.103 227.815L424.536 387.496L159.724 353.389L182.973 172.88Z"
@@ -117,17 +131,17 @@
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M227.239 193.201L192.03 188.666L192.285 186.683L227.494 191.218L227.239 193.201Z"
-		fill="#2563eb"
+		fill={color3}
 	/>
-	<path d="M158 213H223.81L234.151 234H425V395H158V213Z" fill="#d6e2fb" />
+	<path d="M158 213H223.81L234.151 234H425V395H158V213Z" fill={color8} />
 	<path d="M158 213H223.81L234.151 234H425V395H158V213Z" fill="url(#paint9_linear_411_1557)" />
 	<path
 		fill-rule="evenodd"
 		clip-rule="evenodd"
 		d="M204.5 227.5H169V225.5H204.5V227.5Z"
-		fill="#2563eb"
+		fill={color3}
 	/>
-	<path d="M119 253H389L439 439H169L119 253Z" fill="#d6e2fb" />
+	<path d="M119 253H389L439 439H169L119 253Z" fill={color8} />
 	<path d="M119 253H389L439 439H169L119 253Z" fill="url(#paint10_linear_411_1557)" />
 	<path d="M119 253H389L439 439H169L119 253Z" fill="url(#paint11_linear_411_1557)" />
 	<path d="M119 253H389L439 439H169L119 253Z" fill="url(#paint12_linear_411_1557)" />
@@ -291,6 +305,8 @@
 @props:color7: any = '#c8d8fa';
 @props:color8: any = '#d6e2fb';
 @props:ariaLabel: any = 'Document Folders Dark';
-@props:class: string = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white';
+@props:class: string = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white';
 @props:height: any = '100';
+@props:title: any;
+@props:desc: any;
 -->

@@ -2,10 +2,10 @@
 - color2 = '#9ab7f6',
 - color3 = '#c8d8fa',
 - color4 = '#d6e2fb',
-// more colors depends on illustration
+  // more colors depends on illustration
 - ariaLabel = <file name>,
 - class: className = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white',
 - height = '100',
-- title, 
+- title,
 - desc,
 - ...restProps

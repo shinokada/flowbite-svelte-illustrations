@@ -1,3 +1,4 @@
+import type { TitleType, DescType } from './types';
 import type { SVGAttributes } from 'svelte/elements';
 interface Props extends SVGAttributes<SVGElement> {
     color1?: string;
@@ -7,6 +8,8 @@ interface Props extends SVGAttributes<SVGElement> {
     ariaLabel?: string;
     class?: string;
     height?: string;
+    title?: TitleType;
+    desc?: DescType;
 }
 /**
  * [Go to docs](https://flowbite-svelte-illustrations.codewithshin.com/)
@@ -16,8 +19,10 @@ interface Props extends SVGAttributes<SVGElement> {
  * @props:color3: any = '#2563eb';
  * @props:color4: any = '#c8d8fa';
  * @props:ariaLabel: any = '404 Not Found Smiley Dark';
- * @props:class: string = 'shrink-0 w-auto max-w-[16rem] h-40 text-gray-800 dark:text-white';
+ * @props:class: string = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white';
  * @props:height: any = '100';
+ * @props:title: any;
+ * @props:desc: any;
  */
 declare const A404NotFoundSmileyDark: import("svelte").Component<Props, {}, "">;
 type A404NotFoundSmileyDark = ReturnType<typeof A404NotFoundSmileyDark>;
