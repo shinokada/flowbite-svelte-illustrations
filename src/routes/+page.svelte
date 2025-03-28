@@ -52,26 +52,8 @@
 </script>
 
 <div class="relative mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
-	<SupportBanner class="mt-4">
-		To Keep It Going, Please Show Your Love.<a
-			href="https://ko-fi.com/Z8Z2CHALG"
-			target="_blank"
-			aria-label="Buy Me a Coffee at ko-fi.com"
-			><img
-				height="40"
-				style="border:0px;height:40px;"
-				src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
-				alt="Buy Me a Coffee at ko-fi.com"
-			/></a
-		>
-	</SupportBanner>
-
 	<h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
-	<h2 class="my-8 flex justify-center">
-		<A href="/how-to-use" class="underline">This is a demo page. Please read How to use page.</A>
-	</h2>
-	<HomeCards cards={filteredCards} />
-	<h2 class="my-8 flex justify-center">Info</h2>
-	<HomeCards cards={newInfo} />
-	<TechInfo {...pkg} />
+	
+	<h2 class="my-8 flex justify-center">Installation</h2>
+	
 </div>
