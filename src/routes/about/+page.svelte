@@ -45,7 +45,8 @@
 		runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
 		svelteVersion: __SVELTE_VERSION__,
 		svelteKitVersion: __SVELTEKIT_VERSION__,
-		svelte5uilibVersion: __SVELTE_5_UI_LIB_VERSION__,		svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
+		svelte5uilibVersion: __SVELTE_5_UI_LIB_VERSION__,
+		svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
 		viteVersion: __VITE_VERSION__,
 		tailwindcssVersion: __TAILWINDCSS_VERSION__
 	};
@@ -67,7 +68,7 @@
 	</SupportBanner>
 
 	<h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
-	
+
 	<HomeCards cards={filteredCards} />
 	<h2 class="my-8 flex justify-center">Info</h2>
 	<HomeCards cards={newInfo} />

@@ -9,7 +9,7 @@
 		icons: Record<string, Component>;
 		title: string;
 		defaultSize?: string;
-		sizeByTailwind?: boolean; 
+		sizeByTailwind?: boolean;
 		minSize?: string;
 		maxSize?: string;
 		threeTabs?: boolean;
@@ -29,8 +29,8 @@
 		rangeClass?: string | undefined;
 		classRange?: string | undefined;
 		contentClass?: string;
-    step?: string;
-    class?: string;
+		step?: string;
+		class?: string;
 	}
 	let {
 		icons,
@@ -55,9 +55,9 @@
 		minSize = '50',
 		defaultSize = $bindable('100'),
 		maxSize = '200',
-    step="10",
+		step = '10',
 		threeTabs = true,
-    class: className = '',
+		class: className = '',
 		...restProps
 	}: Props = $props();
 
@@ -92,25 +92,23 @@
 					min={minSize}
 					max={maxSize}
 					bind:value={defaultSize}
-          step={step}
+					{step}
 					class={twMerge(classRange, rangeClass)}
 				/>
 			</div>
-			
-      <div class={twMerge('w-full text-left py-8 text-gray-500 dark:text-gray-400',className)}>
-        <div class={twMerge(classDiv3, div3Class)}>
-          {#each filteredEntries as [name, Component] (name)}
-            {#if name !== 'Icon'}
-              <div class={div4Class}>
-                <Component height={defaultSize} {...restProps}
-                ></Component>
-                <Copy iconName={name} btnClass="m-4">{name}</Copy>
-              </div>
-            {/if}
-          {/each}
-        </div>
-      </div>
-			
+
+			<div class={twMerge('w-full py-8 text-left text-gray-500 dark:text-gray-400', className)}>
+				<div class={twMerge(classDiv3, div3Class)}>
+					{#each filteredEntries as [name, Component] (name)}
+						{#if name !== 'Icon'}
+							<div class={div4Class}>
+								<Component height={defaultSize} {...restProps}></Component>
+								<Copy iconName={name} btnClass="m-4">{name}</Copy>
+							</div>
+						{/if}
+					{/each}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

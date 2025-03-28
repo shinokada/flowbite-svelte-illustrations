@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { IconPage, filterIconsByKeyword } from 'runes-webkit';
-	import IllustPage from '../utils/IllustPage.svelte'
+	import IllustPage from '../utils/IllustPage.svelte';
 	import * as icons from '$lib';
-	import {A404NotFoundShoppingDark} from "$lib";
+	import { A404NotFoundShoppingDark } from '$lib';
 
 	const keywordsToInclude = 'Dark';
 	const keyIcons = filterIconsByKeyword(icons, keywordsToInclude);

@@ -1,10 +1,8 @@
 # Flowbite Svelte Illustrations
 
-
-
 ## Requirements
 
-- Svelte 5 
+- Svelte 5
 - tailwindCSS
 
 ## Installation

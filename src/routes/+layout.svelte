@@ -66,7 +66,7 @@
 		{ name: 'Home', href: '/' },
 		{ name: 'Light', href: '/light' },
 		{ name: 'Dark', href: '/dark' },
-		{ name: 'About', href: '/about' },
+		{ name: 'About', href: '/about' }
 	];
 	const brand = {
 		name: 'codewithshin.com',

@@ -1,6 +1,11 @@
 import type { Component } from 'svelte';
-import { type ListType, CogOutline, ExpandOutline, GridPlusOutline, sidebarList } from 'runes-webkit';
-
+import {
+	type ListType,
+	CogOutline,
+	ExpandOutline,
+	GridPlusOutline,
+	sidebarList
+} from 'runes-webkit';
 
 const extra: ListType[] = [
 	{
@@ -21,16 +26,16 @@ const extra: ListType[] = [
 ];
 
 export const newSidebarList: ListType[] = [
-  ...(Array.isArray(sidebarList) ? sidebarList : []), 
-  ...extra
+	...(Array.isArray(sidebarList) ? sidebarList : []),
+	...extra
 ];
 
 export function excludeIconsByKeyword(icons: { [key: string]: any }, keyword: string) {
 	const filteredIcons: { [key: string]: any } = {};
 	for (const key in icons) {
-			if (!key.includes(keyword)) {
-					filteredIcons[key] = icons[key];
-			}
+		if (!key.includes(keyword)) {
+			filteredIcons[key] = icons[key];
+		}
 	}
 	return filteredIcons;
 }
