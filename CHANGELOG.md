@@ -1,5 +1,11 @@
 # flowbite-svelte-illustrations
 
+## 1.0.3
+
+### Patch Changes
+
+- fix: tests update
+
 ## 1.0.2
 
 ### Patch Changes
