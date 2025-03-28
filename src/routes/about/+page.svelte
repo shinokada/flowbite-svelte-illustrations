@@ -67,9 +67,9 @@
 
 	const originalSource = {
 		title: 'Original source',
-		description: `${__ORIGINAL_SOURCE_NAME__}`,
+		description: 'flowbite-illustrations',
 		Icon: InfoCircleOutline,
-		href: `${__ORIGINAL_SOURCE_URL__}`,
+		href: 'https://github.com/themesberg/flowbite-illustrations',
 		icon_class: 'text-orange-500'
 	};
 	const license = {
