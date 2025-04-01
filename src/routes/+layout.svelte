@@ -64,8 +64,7 @@
 
 	const lis: LiType[] = [
 		{ name: 'Home', href: '/' },
-		{ name: 'Light', href: '/light' },
-		{ name: 'Dark', href: '/dark' },
+		{ name: 'Quickstart', href: '/quickstart' },
 		{ name: 'About', href: '/about' }
 	];
 	const brand = {
@@ -100,7 +99,7 @@
 			return url.startsWith(allowedUrl);
 		});
 	}
-	let urlsToIncludeSwitcher = ['/guide', '/', '/how-to-use', '/quick-start'];
+	let urlsToIncludeSwitcher = ['/quickstart', '/', '/about','/light','/dark'];
 	let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
 	// dropdown
 	let dropdown = uiHelpers();

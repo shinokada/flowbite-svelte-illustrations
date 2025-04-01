@@ -22,8 +22,6 @@
 	maxSize="200"
 	step="10"
 	title="Light Illustrations"
-	classDiv3="grid lg:grid-cols-3 grid-cols-2 gap-20 place-items-center "
 	icons={keyIcons}
 	threeTabs={false}
-	class="py-20 dark:bg-white"
 />

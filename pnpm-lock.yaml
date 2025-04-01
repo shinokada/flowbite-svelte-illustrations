@@ -104,6 +104,9 @@ importers:
       tailwind-merge:
         specifier: ^3.0.2
         version: 3.0.2
+      tailwind-variants:
+        specifier: ^1.0.0
+        version: 1.0.0(tailwindcss@4.0.17)
       tailwindcss:
         specifier: ^4.0.17
         version: 4.0.17
