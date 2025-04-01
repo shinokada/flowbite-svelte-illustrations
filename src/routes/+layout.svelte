@@ -99,7 +99,7 @@
 			return url.startsWith(allowedUrl);
 		});
 	}
-	let urlsToIncludeSwitcher = ['/quickstart', '/', '/about','/light','/dark'];
+	let urlsToIncludeSwitcher = ['/quickstart', '/', '/about', '/light', '/dark'];
 	let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
 	// dropdown
 	let dropdown = uiHelpers();

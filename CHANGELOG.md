@@ -1,5 +1,11 @@
 # flowbite-svelte-illustrations
 
+## 1.0.4
+
+### Patch Changes
+
+- docs: README and home page
+
 ## 1.0.3
 
 ### Patch Changes

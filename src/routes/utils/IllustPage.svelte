@@ -43,16 +43,16 @@
 		classDiv2 = 'w-full p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-gray-100 dark:bg-gray-800',
 		div3Class,
 		classDiv3 = 'grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 dark:text-white place-items-center',
-    div4Class = 'w-full place-items-center p-4 border border-gray-200 dark:border-gray-800 rounded-lg dark:bg-gray-800 hover:scale-105',
-    labelClass = 'text-lg py-4',
-    searchClass,
-    classSearch = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500',
-    tab1Class,
-    classTab1 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
-    tab2Class = 'flex items-center text-lg',
-    rangeClass,
-    classRange = 'mt-4 h-2 w=[100px] sm:w-[250px] cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700',
-    contentClass = 'rounded-lg dark_bg_theme mt-4',
+		div4Class = 'w-full place-items-center p-4 border border-gray-200 dark:border-gray-800 rounded-lg dark:bg-gray-800 hover:scale-105',
+		labelClass = 'text-lg py-4',
+		searchClass,
+		classSearch = 'block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 ps-4 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500',
+		tab1Class,
+		classTab1 = 'grid grid-cols-1 gap-8 px-4 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 dark:text-white',
+		tab2Class = 'flex items-center text-lg',
+		rangeClass,
+		classRange = 'mt-4 h-2 w=[100px] sm:w-[250px] cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700',
+		contentClass = 'rounded-lg dark_bg_theme mt-4',
 		title,
 		sizeByTailwind,
 		minSize = '50',
@@ -73,19 +73,19 @@
 	);
 	// $inspect('filteredEntries', filteredEntries);
 	let selectedIllust = $state('');
-	
-	let illusts = $derived(createImageVariants(selectedIllust))
-	$inspect('dark: ', illusts['dark'], 'light: ', illusts['light'])
+
+	let illusts = $derived(createImageVariants(selectedIllust));
+	$inspect('dark: ', illusts['dark'], 'light: ', illusts['light']);
 	// code generator
-  let generatedCode = $derived(
-    (() => {
-      let props = [];
+	let generatedCode = $derived(
+		(() => {
+			let props = [];
 
-      if (defaultSize !== '140') props.push(` size="${defaultSize}"`);
-      const propsString =
-        props.length > 0 ? props.map((prop) => `\n  ${prop}`).join('') + '\n' : '';
+			if (defaultSize !== '140') props.push(` size="${defaultSize}"`);
+			const propsString =
+				props.length > 0 ? props.map((prop) => `\n  ${prop}`).join('') + '\n' : '';
 
-      return `import { ${illusts['light']}, ${illusts['dark']} } from "flowbite-svelte-illustrations";
+			return `import { ${illusts['light']}, ${illusts['dark']} } from "flowbite-svelte-illustrations";
 <div class="dark:hidden">
   <${illusts['light']} ${propsString}/>
 </div>
@@ -93,40 +93,35 @@
   <${illusts['dark']} ${propsString}/>
 </div>
 `;
+		})()
+	);
 
-    })()
-  );
-
-  
 	const illustModal = uiHelpers();
-  let modalStatus = $state(false);
-  const closeModal = illustModal.close;
-  $effect(() => {
-    modalStatus = illustModal.isOpen;
-  });
+	let modalStatus = $state(false);
+	const closeModal = illustModal.close;
+	$effect(() => {
+		modalStatus = illustModal.isOpen;
+	});
 	const updateIllust = (name: string) => {
-    illustModal.toggle();
-    selectedIllust = name;
-		selectedIllust2 = toggleDarkMode(name);
-  };
+		illustModal.toggle();
+		selectedIllust = name;
+	};
 
 	// for interactive builder
-  let builder = uiHelpers();
-  let builderExpand = $state(false);
-  let showBuilderExpandButton = $derived(isGeneratedCodeOverflow(generatedCode));
-  const handleBuilderExpandClick = () => {
-    builderExpand = !builderExpand;
-  };
-
-
+	let builder = uiHelpers();
+	let builderExpand = $state(false);
+	let showBuilderExpandButton = $derived(isGeneratedCodeOverflow(generatedCode));
+	const handleBuilderExpandClick = () => {
+		builderExpand = !builderExpand;
+	};
 </script>
 
 <div class="w-full pb-20">
 	<div class={wrapperClass}>
 		<h1>{title}</h1>
-    {#if header}
-      {@render header()}
-    {/if}
+		{#if header}
+			{@render header()}
+		{/if}
 		<div class={div1Class}>
 			<div class={twMerge(classDiv2, div2Class)}>
 				<div class="mx-auto place-items-center">
@@ -138,8 +133,8 @@
 						placeholder="Search icons"
 						bind:value={searchTerm}
 					/>
-					</div>
-					<div class="mx-auto place-items-center">
+				</div>
+				<div class="mx-auto place-items-center">
 					<input
 						id="default-range"
 						type="range"
@@ -152,50 +147,46 @@
 				</div>
 			</div>
 			<Modal {modalStatus} {closeModal}>
-        <h3 class="font-bold">{selectedIllust}</h3>
-        <DynamicCodeBlockHighlight
-          handleExpandClick={handleBuilderExpandClick}
-          expand={builderExpand}
-          showExpandButton={showBuilderExpandButton}
-          code={generatedCode}
-        />
-      </Modal>
+				<h3 class="font-bold">{selectedIllust}</h3>
+				<DynamicCodeBlockHighlight
+					handleExpandClick={handleBuilderExpandClick}
+					expand={builderExpand}
+					showExpandButton={showBuilderExpandButton}
+					code={generatedCode}
+				/>
+			</Modal>
 			<div class={twMerge('w-full py-8 text-left text-gray-500 dark:text-gray-400 ', className)}>
 				<div class={twMerge(classDiv3, div3Class)}>
-			
 					{#each filteredEntries as [name, Component] (name)}
-            {#if name !== 'Icon'}
-              <button
-                class="group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-100 p-4 hover:scale-105 dark:border-gray-800 dark:bg-gray-800"
-                onclick={() => updateIllust(name)}
-                aria-label="modal-button"
-              >
-                <svg
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  height="24"
-                  width="24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="absolute top-2 right-2 hidden group-hover:block"
-                  ><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
-                    d="M14 4l-4 16"
-                  ></path></svg
-                >
-                <Component
-									height={defaultSize}
-                  {...restProps}
-                ></Component>
+						{#if name !== 'Icon'}
+							<button
+								class="group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-100 p-4 hover:scale-105 dark:border-gray-800 dark:bg-gray-800"
+								onclick={() => updateIllust(name)}
+								aria-label="modal-button"
+							>
+								<svg
+									stroke="currentColor"
+									fill="none"
+									stroke-width="2"
+									viewBox="0 0 24 24"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									height="24"
+									width="24"
+									xmlns="http://www.w3.org/2000/svg"
+									class="absolute top-2 right-2 hidden group-hover:block"
+									><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+										d="M14 4l-4 16"
+									></path></svg
+								>
+								<Component height={defaultSize} {...restProps}></Component>
 
-                <span class="mt-2 text-sm font-medium text-gray-700 dark:text-gray-300">
-                  {name}
-                </span>
-              </button>
-            {/if}
-          {/each}
+								<span class="mt-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+									{name}
+								</span>
+							</button>
+						{/if}
+					{/each}
 				</div>
 			</div>
 		</div>

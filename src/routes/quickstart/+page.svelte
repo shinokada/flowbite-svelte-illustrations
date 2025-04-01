@@ -58,7 +58,7 @@
 </script>
 
 <div class="mx-auto mt-8 h-full max-w-7xl overflow-y-auto px-8 pb-20">
-	<h1 class="my-8 flex justify-center">{removeHyphensAndCapitalize(__NAME__)}</h1>
+	<h1 class="my-8 flex justify-center">Quickstart: Flowbite Svelte Illustrations</h1>
 
 	<H2>Installation</H2>
 	<HighlightCompo

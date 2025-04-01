@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-illustrations",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A collection of free and open-source collection of SVG illustrations.",
   "license": "MIT",
   "homepage": "https://flowbite-svelte-illustrations.codewithshin.com/",
@@ -41,7 +41,8 @@
     "gen:exports": "svelte-lib-helpers exports",
     "copy:packagejson": "svelte-lib-helpers package",
     "gen:docs5FromType": "svelte-lib-helpers docs5FromType",
-    "lib-helpers": "pnpm format && pnpm gen:docs5FromType && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
+    "rmdoc": "svelte-lib-helpers removeDocs",
+    "lib-helpers": "pnpm format && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
     "ch": "npx changeset",
     "cv": "npx changeset version",
     "cp": "npx changeset publish"
@@ -58,8 +59,8 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "peerDependencies": {
-    "tailwindcss": "^4.0.0",
-    "svelte": "^5.0.0"
+    "svelte": "^5.0.0",
+    "tailwindcss": "^4.0.0"
   },
   "devDependencies": {
     "@changesets/cli": "^2.28.1",
@@ -94,6 +95,7 @@
     "svelte-rune-highlight": "^0.5.15",
     "svelte-shields": "^0.5.1",
     "tailwind-merge": "^3.0.2",
+    "tailwind-variants": "^1.0.0",
     "tailwindcss": "^4.0.17",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0",

@@ -17,14 +17,14 @@ pnpm i -D flowbite-svelte-illustrations
 
 ```svelte
 <script lang="ts">
-  import { A404NotFoundSmiley, A404NotFoundSmileyDark } from "flowbite-svelte-illustrations";
+	import { A404NotFoundSmiley, A404NotFoundSmileyDark } from 'flowbite-svelte-illustrations';
 </script>
 
 <div class="dark:hidden">
-  <A404NotFoundSmiley />
+	<A404NotFoundSmiley />
 </div>
 <div class="hidden dark:block">
-  <A404NotFoundSmileyDark />
+	<A404NotFoundSmileyDark />
 </div>
 ```
 
@@ -32,28 +32,28 @@ pnpm i -D flowbite-svelte-illustrations
 
 ```ts
 export type TitleType = {
-  id?: string;
-  title?: string;
+	id?: string;
+	title?: string;
 };
 
 export type DescType = {
-  id?: string;
-  desc?: string;
+	id?: string;
+	desc?: string;
 };
 
 import type { SVGAttributes } from 'svelte/elements';
 interface Props extends SVGAttributes<SVGElement> {
-  color1?: string;
-  color2?: string;
-  color3?: string;
-  color4?: string;
-  // more colors depends on illustration
-  ariaLabel?: string;
-  class?: string;
-  height?: string;
-  title?: TitleType;
-  desc?: DescType;
-};
+	color1?: string;
+	color2?: string;
+	color3?: string;
+	color4?: string;
+	// more colors depends on illustration
+	ariaLabel?: string;
+	class?: string;
+	height?: string;
+	title?: TitleType;
+	desc?: DescType;
+}
 ```
 
 ## Props

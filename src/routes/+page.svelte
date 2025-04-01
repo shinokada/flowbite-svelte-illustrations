@@ -20,24 +20,24 @@
 </script>
 
 <div class="relative dark:hidden">
-<IllustPage
-	minSize="100"
-	defaultSize="140"
-	maxSize="200"
-	step="10"
-	title="Flowbite Svelte Illustrations"
-	icons={LightIcons}
-	threeTabs={false}
-/>
+	<IllustPage
+		minSize="100"
+		defaultSize="140"
+		maxSize="200"
+		step="10"
+		title="Flowbite Svelte Illustrations"
+		icons={LightIcons}
+		threeTabs={false}
+	/>
 </div>
 <div class="relative hidden dark:block">
 	<IllustPage
-	minSize="100"
-	defaultSize="140"
-	maxSize="200"
-	step="10"
-	title="Flowbite Svelte Illustrations"
-	icons={DarkIcons}
-	threeTabs={false}
-/>
+		minSize="100"
+		defaultSize="140"
+		maxSize="200"
+		step="10"
+		title="Flowbite Svelte Illustrations"
+		icons={DarkIcons}
+		threeTabs={false}
+	/>
 </div>

@@ -544,25 +544,3 @@
 		</linearGradient>
 	</defs>
 </svg>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-illustrations.codewithshin.com/)
-## Props
-@props: color1: any = '#111928';
-@props:color2: any = '#1D2735';
-@props:color3: any = '#2563eb';
-@props:color4: any = '#2C3645';
-@props:color5: any = '#374151';
-@props:color6: any = '#6B7280';
-@props:color7: any = '#7F270F';
-@props:color8: any = '#9ab7f6';
-@props:color9: any = '#F9FAFB';
-@props:color10: any = '#FDBA8C';
-@props:color11: any = '#c8d8fa';
-@props:ariaLabel: any = 'Woman Cyber Security Dark';
-@props:class: string = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white';
-@props:height: any = '100';
-@props:title: any;
-@props:desc: any;
--->
