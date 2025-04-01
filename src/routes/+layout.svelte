@@ -216,7 +216,7 @@
 	</Navbar>
 </header>
 
-<div class="lg:flex">
+
 	{#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
 		<Sidebar
 			{activeUrl}
@@ -275,5 +275,5 @@
 		</div>
 	{/if}
 	{@render children()}
-</div>
+
 <Footer {brand} {lis} />
