@@ -1,9 +1,9 @@
 export type TitleType = {
-	id?: string;
-	title?: string;
+  id?: string;
+  title?: string;
 };
 
 export type DescType = {
-	id?: string;
-	desc?: string;
+  id?: string;
+  desc?: string;
 };
