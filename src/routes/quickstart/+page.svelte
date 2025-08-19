@@ -63,34 +63,34 @@
   <HighlightCompo
     codeLang="ts"
     code={modules['./md/installation.md'] as string}
-    clipboardClass="top-2"
+    
   />
 
   <H2>Requirements</H2>
   <HighlightCompo
     codeLang="ts"
     code={modules['./md/requirements.md'] as string}
-    clipboardClass="top-2"
+    
   />
 
   <H2>How to use</H2>
   <HighlightCompo
     codeLang="ts"
     code={modules['./md/how-to-use.md'] as string}
-    clipboardClass="top-2"
+    
   />
 
   <H2>Types</H2>
-  <HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} clipboardClass="top-2" />
+  <HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string}  />
 
   <H2>Props</H2>
-  <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2" />
+  <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string}  />
 
   <H2>Accessibility</H2>
   <HighlightCompo
     codeLang="ts"
     code={modules['./md/accessibility.md'] as string}
-    clipboardClass="top-2"
+    
   />
 
   <P>Checkout the following in the developer't tool.</P>
