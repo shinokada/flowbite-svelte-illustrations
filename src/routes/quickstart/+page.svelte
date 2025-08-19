@@ -74,13 +74,17 @@
   />
 
   <H2>How to use</H2>
-  <HighlightCompo codeLang="ts" code={modules['./md/how-to-use.md'] as string} clipboardClass="top-2" />
+  <HighlightCompo
+    codeLang="ts"
+    code={modules['./md/how-to-use.md'] as string}
+    clipboardClass="top-2"
+  />
 
   <H2>Types</H2>
   <HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} clipboardClass="top-2" />
 
   <H2>Props</H2>
-  <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2"/>
+  <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2" />
 
   <H2>Accessibility</H2>
   <HighlightCompo
@@ -95,8 +99,5 @@
     desc={{ id: 'my-desc', desc: 'Description here' }}
   />
 
-  <HighlightCompo
-    codeLang="ts"
-    code={modules['./md/title-output.md'] as string}
-  />
+  <HighlightCompo codeLang="ts" code={modules['./md/title-output.md'] as string} />
 </div>

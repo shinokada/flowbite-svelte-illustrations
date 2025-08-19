@@ -369,8 +369,8 @@
     fill={color4}
   />
   <path d="M133 64Z" fill={color6} />
-<path d="M169.5 8Z" fill={color6} />
-<path d="M90.5 27Z" fill={color6} />
+  <path d="M169.5 8Z" fill={color6} />
+  <path d="M90.5 27Z" fill={color6} />
   <defs>
     <linearGradient
       id="paint0_linear_749_6"

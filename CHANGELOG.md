@@ -1,5 +1,11 @@
 # flowbite-svelte-illustrations
 
+## 1.0.5
+
+### Patch Changes
+
+- fix: remove unnecessary -nan
+
 ## 1.0.4
 
 ### Patch Changes

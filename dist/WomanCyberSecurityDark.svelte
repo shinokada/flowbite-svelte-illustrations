@@ -353,18 +353,9 @@
     d="M351.109 430L351.462 424.625L346.891 427.639L345 424.361L349.924 422L345 419.639L346.891 416.361L351.462 419.375L351.109 414H354.905L354.538 419.375L359.109 416.361L361 419.639L356.09 422L361 424.361L359.109 427.639L354.538 424.625L354.905 430H351.109Z"
     fill={color6}
   />
-  <path
-    d="M133 64L-nan -nanL133 64C-nan -nan -nan -nan 150 81C-nan -nan -nan -nan 150 81Lnan nanL150 81L-nan -nanL150 81C-nan -nan -nan -nan 133 98C-nan -nan -nan -nan 133 98Lnan nanL133 98L-nan -nanL133 98C-nan -nan -nan -nan 116 81C-nan -nan -nan -nan 116 81Lnan nanL116 81L-nan -nanL116 81C-nan -nan -nan -nan 133 64C-nan -nan -nan -nan 133 64Lnan nanL133 64Z"
-    fill={color6}
-  />
-  <path
-    d="M169.5 8L-nan -nanL169.5 8C-nan -nan -nan -nan 177 15.5C-nan -nan -nan -nan 177 15.5Lnan nanL177 15.5L-nan -nanL177 15.5C-nan -nan -nan -nan 169.5 23C-nan -nan -nan -nan 169.5 23Lnan nanL169.5 23L-nan -nanL169.5 23C-nan -nan -nan -nan 162 15.5C-nan -nan -nan -nan 162 15.5Lnan nanL162 15.5L-nan -nanL162 15.5C-nan -nan -nan -nan 169.5 8C-nan -nan -nan -nan 169.5 8Lnan nanL169.5 8Z"
-    fill={color6}
-  />
-  <path
-    d="M90.5 27L-nan -nanL90.5 27C-nan -nan -nan -nan 98 34.5C-nan -nan -nan -nan 98 34.5Lnan nanL98 34.5L-nan -nanL98 34.5C-nan -nan -nan -nan 90.5 42C-nan -nan -nan -nan 90.5 42Lnan nanL90.5 42L-nan -nanL90.5 42C-nan -nan -nan -nan 83 34.5C-nan -nan -nan -nan 83 34.5Lnan nanL83 34.5L-nan -nanL83 34.5C-nan -nan -nan -nan 90.5 27C-nan -nan -nan -nan 90.5 27Lnan nanL90.5 27Z"
-    fill={color6}
-  />
+  <path d="M169.5 8C177 15.5 177 15.5 169.5 23C162 15.5 162 15.5 169.5 8Z" fill={color6} />
+
+  <path d="M90.5 27C98 34.5 98 34.5 90.5 42C83 34.5 83 34.5 90.5 27Z" fill={color6} />
   <defs>
     <linearGradient
       id="paint0_linear_749_7"

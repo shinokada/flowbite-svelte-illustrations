@@ -20,7 +20,6 @@
   --color-primary-900: #701a75;
 }
 
-
 html {
   -webkit-text-size-adjust: 100%;
   font-family:
@@ -84,4 +83,3 @@ code {
 .dark-bg-theme2 {
   @apply dark:bg-gray-800;
 }
-
