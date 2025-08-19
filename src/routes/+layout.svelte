@@ -1,14 +1,12 @@
 <script lang="ts">
   import '../app.css';
-  import { sineIn } from 'svelte/easing';
   import type { Component } from 'svelte';
   import { page } from '$app/state';
-  import { newSidebarList } from './utils/helper.ts';
+  import { newSidebarList } from './utils/helper.js';
   import {
     Footer,
     OnThisPage,
     extract,
-    removeHyphensAndCapitalize,
     DotsHorizontalOutline,
     GithubSolid,
     random_tailwind_color,
@@ -19,28 +17,23 @@
     Navbar,
     NavLi,
     NavBrand,
+    NavHamburger,
     NavUl,
     uiHelpers,
-    NavHamburger,
     DarkMode,
     Dropdown,
     DropdownItem,
-    Sidebar,
     SidebarButton,
+    Sidebar,
     SidebarGroup,
     SidebarDropdownWrapper,
-    SidebarItem,
-    CloseButton,
-    SidebarBrand
+    SidebarItem
   } from 'flowbite-svelte';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';
 
-  let activeUrl = $state(page.url.pathname);
-  $effect(() => {
-    activeUrl = page.url.pathname;
-  });
+  let activeUrl = $derived(page.url.pathname);
 
   type LiType = {
     name: string;
@@ -68,20 +61,16 @@
     { name: 'Quickstart', href: '/quickstart' },
     { name: 'About', href: '/about' }
   ];
+
   const brand = {
     name: 'codewithshin.com',
     href: 'https://codewithshin.com'
   };
   const urlsToIncludeSwitcherAndSidebar = ['/guide/', '/guide2/', '/how-to-use', '/quick-start'];
   /*eslint no-undef: "off"*/
-  const siteName = removeHyphensAndCapitalize(__NAME__);
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
   const twitterUrl = 'https://twitter.com/shinokada';
   const blueskyUrl = 'https://bsky.app/profile/codewithshin.com';
-
-  // nav
-  let nav = uiHelpers();
-  let navStatus = $state(false);
 
   function isIncluded(url: string, allowedUrls: string[]): boolean {
     return allowedUrls.some((allowedUrl) => {
@@ -93,21 +82,10 @@
       return url.startsWith(allowedUrl);
     });
   }
-  let urlsToIncludeSwitcher = ['/quickstart', '/', '/about', '/light', '/dark'];
+  let urlsToIncludeSwitcher = ['/guide', '/guide2', '/how-to-use', '/quick-start'];
   let include = $derived(isIncluded(currentUrl, urlsToIncludeSwitcher));
-  // dropdown
-  let dropdown = uiHelpers();
-  let dropdownStatus = $state(false);
-  let closeDropdown = dropdown.close;
-  let dropdownTransitionParams = {
-    y: 0,
-    duration: 200,
-    easing: sineIn
-  };
 
   $effect(() => {
-    navStatus = nav.isOpen;
-    dropdownStatus = dropdown.isOpen;
     currentUrl = page.url.pathname;
     metaTags = page.data.pageMetaTags
       ? deepMerge(page.data.layoutMetaTags, page.data.pageMetaTags)
@@ -125,16 +103,17 @@
 <Navbar
   breakpoint="lg"
   fluid
-  class="fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 lg:py-0 dark:border-gray-700 dark:bg-stone-950"
+  class="dark-bg-theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 lg:py-0 dark:border-gray-700"
   navContainerClass="lg:justify-between"
 >
   <NavBrand href="/">
     <span
-      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap lg:ml-8 xl:text-2xl"
-      >Flowbite Svelte Illustration</span
+      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap lg:ml-8 lg:text-3xl"
+      >Flowbite Svelte Illustrations</span
     >
   </NavBrand>
-  <div class="flex md:order-2">
+  <div class="flex justify-end lg:order-2">
+    <NavHamburger class="order-3" />
     {#if include}
       <div class="hidden lg:block">
         <DynamicCodeBlockStyle />
@@ -158,7 +137,7 @@
     </Dropdown>
     <DarkMode class="m-0 p-2" />
   </div>
-  <NavHamburger class="order-2 lg:order-1" />
+
   <NavUl
     {activeUrl}
     class="order-2 lg:order-1"
@@ -166,7 +145,7 @@
   >
     {#each lis as { name, href, Icon }}
       {#if Icon}
-        <Icon class="mb-3 h-8 w-8 {random_tailwind_color()}"></Icon>
+        <Icon class="mb-3 h-6 w-6 {random_tailwind_color()}"></Icon>
       {/if}
       <NavLi {href}>{name}</NavLi>
     {/each}
@@ -177,8 +156,8 @@
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => currentUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
-      class="fixed top-5 left-0
-     z-100 mb-2"
+      class="fixed top-3 left-0
+     z-100"
       breakpoint="lg"
     />
     <Sidebar
@@ -187,24 +166,14 @@
       {closeSidebar}
       breakpoint="lg"
       classes={{
-        div: 'dark:bg-stone-900 bg-gray-50',
+        div: 'dark-bg-theme bg-white',
         nonactive: 'p-1 hover:bg-gray-200',
         active:
           'flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
       }}
-      class="h-screen border-r border-gray-50 lg:top-[74px] dark:border-gray-700 dark:bg-stone-900"
+      class="dark-bg-theme mt-16 h-screen border-r border-gray-100 bg-white lg:top-[74px] lg:mt-0 dark:border-gray-700"
     >
-      <CloseButton
-        onclick={closeSidebar}
-        color="gray"
-        class="absolute top-3 right-1 p-2 lg:hidden"
-      />
       <SidebarGroup>
-        <SidebarBrand>
-          <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white"
-            >Runes Webkit</span
-          >
-        </SidebarBrand>
         {#each newSidebarList as { name, Icon, children, href }}
           {#if children}
             <SidebarDropdownWrapper

@@ -309,25 +309,26 @@
     fill={color2}
   />
   <path
-    d="M386.359 119L-nan -nanL386.359 119C-nan -nan -nan -nan 402.717 135.357C-nan -nan -nan -nan 402.717 135.357L-nan -nanL402.717 135.357L-nan -nanL402.717 135.357C-nan -nan -nan -nan 386.359 151.715C-nan -nan -nan -nan 386.359 151.715L-nan -nanL386.359 151.715L-nan -nanL386.359 151.715C-nan -nan -nan -nan 370.002 135.357C-nan -nan -nan -nan 370.002 135.357L-nan -nanL370.002 135.357L-nan -nanL370.002 135.357C-nan -nan -nan -nan 386.359 119C-nan -nan -nan -nan 386.359 119L-nan -nanL386.359 119Z"
+    d="M386.359 119C402.717 135.357 402.717 135.357 386.359 151.715C370.002 135.357 370.002 135.357 386.359 119Z"
     fill="white"
   />
   <path
-    d="M177.82 464.537L-nan -nanL177.82 464.537C-nan -nan -nan -nan 189.641 476.357C-nan -nan -nan -nan 189.641 476.357L-nan -nanL189.641 476.357L-nan -nanL189.641 476.357C-nan -nan -nan -nan 177.82 488.178C-nan -nan -nan -nan 177.82 488.178L-nan -nanL177.82 488.178L-nan -nanL177.82 488.178C-nan -nan -nan -nan 166 476.357C-nan -nan -nan -nan 166 476.357L-nan -nanL166 476.357L-nan -nanL166 476.357C-nan -nan -nan -nan 177.82 464.537C-nan -nan -nan -nan 177.82 464.537L-nan -nanL177.82 464.537Z"
+    d="M177.82 464.537C189.641 476.357 189.641 476.357 177.82 488.178C166 476.357 166 476.357 177.82 464.537Z"
     fill="white"
   />
   <path
-    d="M300.523 48.2954L-nan -nanL300.523 48.2954C-nan -nan -nan -nan 307.753 55.5251C-nan -nan -nan -nan 307.753 55.5251L-nan -nanL307.753 55.5251L-nan -nanL307.753 55.5251C-nan -nan -nan -nan 300.523 62.7549C-nan -nan -nan -nan 300.523 62.7549L-nan -nanL300.523 62.7549L-nan -nanL300.523 62.7549C-nan -nan -nan -nan 293.294 55.5251C-nan -nan -nan -nan 293.294 55.5251L-nan -nanL293.294 55.5251L-nan -nanL293.294 55.5251C-nan -nan -nan -nan 300.523 48.2954C-nan -nan -nan -nan 300.523 48.2954L-nan -nanL300.523 48.2954Z"
+    d="M300.523 48.2954C307.753 55.5251 307.753 55.5251 300.523 62.7549C293.294 55.5251 293.294 55.5251 300.523 48.2954Z"
     fill="white"
   />
   <path
-    d="M114.23 128L-nan -nanL114.23 128C-nan -nan -nan -nan 121.46 135.23C-nan -nan -nan -nan 121.46 135.23L-nan -nanL121.46 135.23L-nan -nanL121.46 135.23C-nan -nan -nan -nan 114.23 142.459C-nan -nan -nan -nan 114.23 142.459L-nan -nanL114.23 142.459L-nan -nanL114.23 142.459C-nan -nan -nan -nan 107.001 135.23C-nan -nan -nan -nan 107.001 135.23L-nan -nanL107.001 135.23L-nan -nanL107.001 135.23C-nan -nan -nan -nan 114.23 128C-nan -nan -nan -nan 114.23 128L-nan -nanL114.23 128Z"
-    fill={color3}
+    d="M114.23 128C121.46 135.23 121.46 135.23 114.23 142.459C107.001 135.23 107.001 135.23 114.23 128Z"
+    fill="white"
   />
   <path
-    d="M357.23 431L-nan -nanL357.23 431C-nan -nan -nan -nan 364.46 438.23C-nan -nan -nan -nan 364.46 438.23L-nan -nanL364.46 438.23L-nan -nanL364.46 438.23C-nan -nan -nan -nan 357.23 445.459C-nan -nan -nan -nan 357.23 445.459L-nan -nanL357.23 445.459L-nan -nanL357.23 445.459C-nan -nan -nan -nan 350.001 438.23C-nan -nan -nan -nan 350.001 438.23L-nan -nanL350.001 438.23L-nan -nanL350.001 438.23C-nan -nan -nan -nan 357.23 431C-nan -nan -nan -nan 357.23 431L-nan -nanL357.23 431Z"
-    fill={color3}
+    d="M357.23 431C364.46 438.23 364.46 438.23 357.23 445.459C350.001 438.23 350.001 438.23 357.23 431Z"
+    fill="white"
   />
+
   <defs>
     <linearGradient
       id="paint0_linear_749_2"

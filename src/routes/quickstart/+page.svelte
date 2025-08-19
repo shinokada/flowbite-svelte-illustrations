@@ -61,32 +61,32 @@
 
   <H2>Installation</H2>
   <HighlightCompo
-    class="max-w-7xl"
     codeLang="ts"
     code={modules['./md/installation.md'] as string}
+    clipboardClass="top-2"
   />
 
   <H2>Requirements</H2>
   <HighlightCompo
-    class="max-w-7xl"
     codeLang="ts"
     code={modules['./md/requirements.md'] as string}
+    clipboardClass="top-2"
   />
 
   <H2>How to use</H2>
-  <HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/how-to-use.md'] as string} />
+  <HighlightCompo codeLang="ts" code={modules['./md/how-to-use.md'] as string} clipboardClass="top-2" />
 
   <H2>Types</H2>
-  <HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/types.md'] as string} />
+  <HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} clipboardClass="top-2" />
 
   <H2>Props</H2>
-  <HighlightCompo class="max-w-7xl" codeLang="ts" code={modules['./md/props.md'] as string} />
+  <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} clipboardClass="top-2"/>
 
   <H2>Accessibility</H2>
   <HighlightCompo
-    class="max-w-7xl"
     codeLang="ts"
     code={modules['./md/accessibility.md'] as string}
+    clipboardClass="top-2"
   />
 
   <P>Checkout the following in the developer't tool.</P>
@@ -96,7 +96,6 @@
   />
 
   <HighlightCompo
-    class="max-w-7xl"
     codeLang="ts"
     code={modules['./md/title-output.md'] as string}
   />

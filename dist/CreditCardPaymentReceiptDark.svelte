@@ -29,9 +29,9 @@
     color6 = '#374151',
     color7 = '#6B7280',
     color8 = '#A8A8A8',
-    color9 = '#F9FAFB',
-    color10 = '#c8d8fa',
-    color11 = '#d6e2fb',
+    color9 = '#c8d8fa',
+    color10 = '#d6e2fb',
+    color11 = '#F9FAFB',
     ariaLabel = 'Credit Card Payment Receipt Dark',
     class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
     height = '100',
@@ -100,7 +100,7 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M388.063 132.577C388.769 133.426 388.654 134.687 387.805 135.393L355.411 162.366L345.439 142.195C344.949 141.205 345.355 140.005 346.345 139.516C347.335 139.026 348.535 139.432 349.024 140.422L356.749 156.047L385.246 132.32C386.095 131.613 387.356 131.728 388.063 132.577Z"
-    fill={color11}
+    fill={color10}
   />
   <path
     d="M97.3041 55.6569C100.428 52.5327 105.494 52.5327 108.618 55.6569L266.303 213.342C269.427 216.466 269.427 221.531 266.303 224.655L174.656 316.302C171.532 319.426 166.466 319.426 163.342 316.302L5.65739 158.617C2.5332 155.493 2.53321 150.428 5.6574 147.304L97.3041 55.6569Z"
@@ -155,27 +155,27 @@
     d="M198.243 197.963L224.406 224.125L223.346 225.186L197.183 199.023L198.243 197.963Z"
     fill={color1}
   />
-  <path d="M203 386.3L11.3 384.1L353 293.1H544L203 386.3Z" fill={color11} />
+  <path d="M203 386.3L11.3 384.1L353 293.1H544L203 386.3Z" fill={color10} />
   <path d="M203 386.3L11.3 384.1L353 293.1H544L203 386.3Z" fill="url(#paint5_linear_748_167)" />
-  <path d="M203 384H10V447H203V384Z" fill={color11} />
+  <path d="M203 384H10V447H203V384Z" fill={color10} />
   <path d="M203 384H10V447H203V384Z" fill="url(#paint6_linear_748_167)" />
   <path
     d="M221.555 372.602C218.134 373.53 214.604 373.999 211.059 373.997L77.0574 373.905C75.8889 373.905 75.6702 372.243 76.7987 371.94L306.003 310.37C309.388 309.461 312.876 309 316.381 309H448.593C449.761 309 449.982 310.66 448.855 310.965L221.555 372.602Z"
-    fill={color9}
+    fill={color11}
   />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M84.6163 371.91L211.06 371.997C214.428 371.999 217.781 371.553 221.032 370.672L441.084 311H316.381C313.052 311 309.737 311.438 306.522 312.301L84.6163 371.91ZM211.059 373.997C214.604 373.999 218.134 373.53 221.555 372.602L448.855 310.965C449.982 310.66 449.761 309 448.593 309H316.381C312.876 309 309.388 309.461 306.003 310.37L76.7987 371.94C75.6702 372.243 75.8889 373.905 77.0574 373.905L211.059 373.997Z"
-    fill={color10}
+    fill={color9}
   />
-  <path d="M203 384L546 292.5V447H203V384Z" fill={color11} />
+  <path d="M203 384L546 292.5V447H203V384Z" fill={color10} />
   <path d="M203 384L546 292.5V447H203V384Z" fill="url(#paint7_linear_748_167)" />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M513 366.49C513 365.851 512.408 365.376 511.784 365.514L334.784 404.63C334.326 404.731 334 405.137 334 405.606V447H332V405.606C332 404.199 332.978 402.981 334.353 402.677L511.353 363.561C513.225 363.147 515 364.573 515 366.49V447H513V366.49Z"
-    fill={color10}
+    fill={color9}
   />
   <path
     fill-rule="evenodd"
@@ -187,7 +187,7 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M36 405C35.4477 405 35 405.448 35 406V447H33V406C33 404.343 34.3431 403 36 403H177C178.657 403 180 404.343 180 406V447H178V406C178 405.448 177.552 405 177 405H36Z"
-    fill={color10}
+    fill={color9}
   />
   <path
     fill-rule="evenodd"
@@ -218,30 +218,30 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M349.676 299.5C358.512 270.966 397.214 215 483.501 215H584.941C511.487 222.699 477.711 272.964 469.63 299.5H349.676Z"
-    fill={color9}
+    fill={color11}
   />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M462.5 291H362V289H462.5V291Z" fill={color10} />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M462.5 291H362V289H462.5V291Z" fill={color9} />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M473 271L425 271L425 269L473 269L473 271Z"
-    fill={color10}
+    fill={color9}
   />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M375 269H395V271H375V269Z" fill={color10} />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M375 269H395V271H375V269Z" fill={color9} />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M493 251L447 251L447 249L493 249L493 251Z"
-    fill={color10}
+    fill={color9}
   />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M399 249H414V251H399V249Z" fill={color10} />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M399 249H414V251H399V249Z" fill={color9} />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M523 231L488 231L488 229L523 229L523 231Z"
-    fill={color10}
+    fill={color9}
   />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M431 229H445V231H431V229Z" fill={color10} />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M431 229H445V231H431V229Z" fill={color9} />
   <defs>
     <linearGradient
       id="paint0_linear_748_167"

@@ -51,7 +51,7 @@
     tab2Class = 'flex items-center text-lg',
     rangeClass,
     classRange = 'mt-4 h-2 w=[100px] sm:w-[200px] cursor-pointer appearance-none rounded-lg bg-gray-200 dark:bg-gray-700',
-    contentClass = 'rounded-lg dark_bg_theme mt-4',
+    contentClass = 'rounded-lg dark-bg-theme mt-4',
     title,
     sizeByTailwind,
     minSize = '50',
