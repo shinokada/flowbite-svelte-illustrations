@@ -15,7 +15,6 @@
     buttonClass?: string;
     codeLang?: string;
     class?: string;
-    expanded?: boolean;
     replaceLib?: boolean;
   }
 

@@ -143,7 +143,7 @@
     class="order-2 lg:order-1"
     classes={{ active: activeClass, nonActive: nonActiveClass }}
   >
-    {#each lis as { name, href, Icon }}
+    {#each lis as { name, href, Icon } (name)}
       {#if Icon}
         <Icon class="mb-3 h-6 w-6 {random_tailwind_color()}"></Icon>
       {/if}
@@ -174,7 +174,7 @@
       class="dark-bg-theme mt-16 h-screen border-r border-gray-100 bg-white lg:top-[74px] lg:mt-0 dark:border-gray-700"
     >
       <SidebarGroup>
-        {#each newSidebarList as { name, Icon, children, href }}
+        {#each newSidebarList as { name, Icon, children, href } (name)}
           {#if children}
             <SidebarDropdownWrapper
               label={name}
@@ -185,7 +185,7 @@
               {#snippet icon()}
                 <Icon />
               {/snippet}
-              {#each children as { name, Icon, href }}
+              {#each children as { name, Icon, href } (name)}
                 <SidebarItem label={name} onclick={closeSidebar} {href} aClass="ml-4">
                   {#snippet icon()}
                     <Icon />
