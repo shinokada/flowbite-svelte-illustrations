@@ -29,9 +29,9 @@
     color6 = '#374151',
     color7 = '#6B7280',
     color8 = '#7F270F',
-    color9 = '#c8d8fa',
-    color10 = '#F9FAFB',
-    color11 = '#FDBA8C',
+    color9 = '#F9FAFB',
+    color10 = '#FDBA8C',
+    color11 = '#c8d8fa',
     ariaLabel = 'Man Pointing Smartphone Dark',
     class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
     height = '100',
@@ -39,8 +39,9 @@
     desc,
     ...restProps
   }: Props = $props();
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaLabelledby = $derived(title?.id || undefined);
+  const ariaDescribedby = $derived(desc?.id || undefined);
+  const shouldUseAriaLabel = $derived(!title);
 </script>
 
 <svg
@@ -52,8 +53,9 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   style={`height: ${height}`}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-label={shouldUseAriaLabel ? ariaLabel : undefined}
+  aria-labelledby={ariaLabelledby}
+  aria-describedby={ariaDescribedby}
   {...restProps}
 >
   {#if title?.id && title.title}
@@ -209,27 +211,27 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M71 244V260C71 266.627 76.3726 272 83 272C89.6274 272 95 266.627 95 260V244H71ZM70.8824 242C69.8428 242 69 242.843 69 243.882V260C69 267.732 75.268 274 83 274C90.732 274 97 267.732 97 260V243.882C97 242.843 96.1572 242 95.1176 242H70.8824Z"
-    fill={color9}
+    fill={color11}
     fill-opacity="0.4"
   />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M35 244V261C35 267.075 39.9249 272 46 272C52.0751 272 57 267.075 57 261V244H35ZM34.8824 242C33.8428 242 33 242.843 33 243.882V261C33 268.18 38.8203 274 46 274C53.1797 274 59 268.18 59 261V243.882C59 242.843 58.1572 242 57.1176 242H34.8824Z"
-    fill={color9}
+    fill={color11}
     fill-opacity="0.4"
   />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M45 521L1 521L1 519L45 519L45 521Z"
-    fill={color9}
+    fill={color11}
   />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M133 521L90 521L90 519L133 519L133 521Z"
-    fill={color9}
+    fill={color11}
   />
   <path
     d="M47.4999 77.4998C52.2999 84.6998 55.1666 92.1665 55.9999 94.9999L68 92.4999L78 58.9998C86 49.9998 70.5 43 60 44.9998C50.5695 46.796 47.9999 52.3332 47.9999 55.9998C37.9999 55.9998 41.4999 68.4998 47.4999 77.4998Z"
@@ -237,7 +239,7 @@
   />
   <path
     d="M75.5 116L72.5 88.0002C70.3333 82.8335 66 74.2002 66 81.0002C66 87.8002 59.3333 93.1668 56 95.0002C55.6 104.2 49.8333 115.167 47 119.5L75.5 116Z"
-    fill={color11}
+    fill={color10}
   />
   <path
     d="M75.5 116L72.5 88.0002C70.3333 82.8335 66 74.2002 66 81.0002C66 87.8002 59.3333 93.1668 56 95.0002C55.6 104.2 49.8333 115.167 47 119.5L75.5 116Z"
@@ -245,7 +247,7 @@
   />
   <path
     d="M61.9996 69.5C60.4996 76.5 66.4996 91.5 76.9996 90C81.5087 89.3559 83.436 84.0091 83.6922 77.7215C83.7245 76.9312 85.5188 77.8126 85.5 77C85.4736 75.8565 83.6099 73.0118 83.4911 71.8598C82.8019 65.1776 80.6435 58.7031 77.9996 56.5C77.1664 56 75.1154 57.5 74.5 61.5C73.5 68 71 71 69.5 69.5C67.596 67.5961 63.4996 62.5 61.9996 69.5Z"
-    fill={color11}
+    fill={color10}
   />
   <path
     d="M79.1344 70.3016C79.0387 70.8678 79.4201 71.4045 79.9863 71.5003C80.5526 71.596 81.0893 71.2146 81.185 70.6483C81.2808 70.0821 80.8994 69.5454 80.3331 69.4497C79.7668 69.3539 79.2302 69.7353 79.1344 70.3016Z"
@@ -277,7 +279,7 @@
   />
   <path
     d="M259 114C259.5 120 230 129 229.5 129L223.5 120.5L242 108V111C247.5 110 258.6 109.2 259 114Z"
-    fill={color11}
+    fill={color10}
   />
   <path
     d="M259 114C259.5 120 230 129 229.5 129L223.5 120.5L242 108V111C247.5 110 258.6 109.2 259 114Z"
@@ -285,7 +287,7 @@
   />
   <path
     d="M109 227H29.5C29.5 218.5 30.5 193.5 30.5 169.5C30.5 133.486 43.5 112 47 112C50.5 112 55 114 61.5 114C68 114 71 110 82 112C90.8 113.6 125.667 135.333 142 146L224.758 115.639C225.741 115.279 226.835 115.736 227.268 116.689L233.226 129.797C233.662 130.756 233.28 131.887 232.353 132.386L156.602 173.143C147.515 178.033 136.553 177.909 127.579 172.815L105 160L109 227Z"
-    fill={color10}
+    fill={color9}
   />
   <path
     d="M109 227H29.5C29.5 218.5 30.5 193.5 30.5 169.5C30.5 133.486 43.5 112 47 112C50.5 112 55 114 61.5 114C68 114 71 110 82 112C90.8 113.6 125.667 135.333 142 146L224.758 115.639C225.741 115.279 226.835 115.736 227.268 116.689L233.226 129.797C233.662 130.756 233.28 131.887 232.353 132.386L156.602 173.143C147.515 178.033 136.553 177.909 127.579 172.815L105 160L109 227Z"
@@ -297,12 +299,12 @@
     d="M80.5 227H109L105.011 160.188L80.5 146.5V227Z"
     fill="url(#paint6_linear_182_7957)"
   />
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M109 220H29V218H109V220Z" fill={color9} />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M109 220H29V218H109V220Z" fill={color11} />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M222.096 138.428L213.096 119.428L214.903 118.572L223.903 137.572L222.096 138.428Z"
-    fill={color9}
+    fill={color11}
   />
   <defs>
     <linearGradient

@@ -25,8 +25,9 @@
     desc,
     ...restProps
   }: Props = $props();
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaLabelledby = $derived(title?.id || undefined);
+  const ariaDescribedby = $derived(desc?.id || undefined);
+  const shouldUseAriaLabel = $derived(!title);
 </script>
 
 <svg
@@ -38,8 +39,9 @@
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   style={`height: ${height}`}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-label={shouldUseAriaLabel ? ariaLabel : undefined}
+  aria-labelledby={ariaLabelledby}
+  aria-describedby={ariaDescribedby}
   {...restProps}
 >
   {#if title?.id && title.title}

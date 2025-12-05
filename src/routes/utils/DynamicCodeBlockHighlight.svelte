@@ -30,9 +30,9 @@
     class: className
   }: Props = $props();
 
-  if (replaceLib) {
-    code = replaceLibImport(code);
-  }
+  // if (replaceLib) {
+  //   code = replaceLibImport(code);
+  // }
 
   $effect(() => {
     if (replaceLib) {
