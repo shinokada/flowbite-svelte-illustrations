@@ -89,7 +89,7 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "publint": "^0.3.23",
     "runatics": "^0.3.0",
-    "runes-meta-tags": "^0.5.0",
+    "runes-meta-tags": "^0.5.1",
     "runes-webkit": "^0.12.1",
     "svelte": "^5.56.9",
     "svelte-check": "^4.7.6",
