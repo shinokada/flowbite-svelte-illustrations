@@ -8,7 +8,6 @@
     color4?: string;
     color5?: string;
     color6?: string;
-    color7?: string;
     ariaLabel?: string;
     class?: string;
     height?: string;
@@ -21,9 +20,8 @@
     color2 = '#2563eb',
     color3 = '#374151',
     color4 = '#6B7280',
-    color5 = '#9ab7f6',
-    color6 = '#c8d8fa',
-    color7 = '#d6e2fb',
+    color5 = '#c8d8fa',
+    color6 = '#d6e2fb',
     ariaLabel = 'Laptop Server Error Dark',
     class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
     height = '100',
@@ -452,10 +450,10 @@
     fill={color4}
     fill-opacity="0.3"
   />
-  <rect x="68" y="248" width="358" height="10" rx="2" fill={color6} />
+  <rect x="68" y="248" width="358" height="10" rx="2" fill={color5} />
   <path
     d="M85 51C85 49.8954 85.8954 49 87 49H406C407.105 49 408 49.8954 408 51V248H85V51Z"
-    fill={color7}
+    fill={color6}
   />
   <path
     d="M85 51C85 49.8954 85.8954 49 87 49H406C407.105 49 408 49.8954 408 51V248H85V51Z"
@@ -483,7 +481,7 @@
   />
   <path
     d="M250.426 128L249.83 171.909H242.909L242.312 128H250.426ZM246.369 189.568C244.898 189.568 243.635 189.041 242.581 187.987C241.527 186.933 241 185.67 241 184.199C241 182.727 241.527 181.464 242.581 180.411C243.635 179.357 244.898 178.83 246.369 178.83C247.841 178.83 249.104 179.357 250.158 180.411C251.212 181.464 251.739 182.727 251.739 184.199C251.739 185.173 251.49 186.068 250.993 186.884C250.516 187.699 249.869 188.355 249.054 188.852C248.259 189.33 247.364 189.568 246.369 189.568Z"
-    fill={color7}
+    fill={color6}
   />
   <defs>
     <linearGradient
