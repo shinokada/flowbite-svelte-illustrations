@@ -1,5 +1,11 @@
 # flowbite-svelte-illustrations
 
+## 1.1.0
+
+### Minor Changes
+
+- fix: remove un-used color variables
+
 ## 1.0.6
 
 ### Patch Changes
