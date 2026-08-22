@@ -5,7 +5,6 @@
     color1?: string;
     color2?: string;
     color3?: string;
-    color4?: string;
     ariaLabel?: string;
     class?: string;
     height?: string;
@@ -16,8 +15,7 @@
   let {
     color1 = '#111928',
     color2 = '#2563eb',
-    color3 = '#c8d8fa',
-    color4 = '#d6e2fb',
+    color3 = '#d6e2fb',
     ariaLabel = '404 Not Found Smiley',
     class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
     height = '100',
@@ -52,7 +50,7 @@
   {/if}
   <path
     d="M532 191C532 296.486 446.486 382 341 382C235.514 382 150 296.486 150 191C150 85.5136 235.514 0 341 0C446.486 0 532 85.5136 532 191Z"
-    fill={color4}
+    fill={color3}
   />
   <path
     d="M532 191C532 296.486 446.486 382 341 382C235.514 382 150 296.486 150 191C150 85.5136 235.514 0 341 0C446.486 0 532 85.5136 532 191Z"

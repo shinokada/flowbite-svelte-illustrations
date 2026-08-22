@@ -9,7 +9,6 @@ interface Props extends SVGAttributes<SVGElement> {
     color6?: string;
     color7?: string;
     color8?: string;
-    color9?: string;
     ariaLabel?: string;
     class?: string;
     height?: string;

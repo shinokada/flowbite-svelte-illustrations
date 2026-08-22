@@ -1,5 +1,11 @@
 # flowbite-svelte-illustrations
 
+## 1.1.1
+
+### Patch Changes
+
+- fix: peerDependencies svelte to ^5.0.0
+
 ## 1.1.0
 
 ### Minor Changes

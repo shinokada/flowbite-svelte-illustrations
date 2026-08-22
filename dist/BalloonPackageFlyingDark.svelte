@@ -6,8 +6,6 @@
     color2?: string;
     color3?: string;
     color4?: string;
-    color5?: string;
-    color6?: string;
     ariaLabel?: string;
     class?: string;
     height?: string;
@@ -16,12 +14,10 @@
   }
 
   let {
-    color1 = '#111928',
-    color2 = '#2563eb',
-    color3 = '#374151',
-    color4 = '#9ab7f6',
-    color5 = '#c8d8fa',
-    color6 = '#d6e2fb',
+    color1 = '#2563eb',
+    color2 = '#374151',
+    color3 = '#c8d8fa',
+    color4 = '#d6e2fb',
     ariaLabel = 'Balloon Package Flying Dark',
     class: className = 'shrink-0 w-auto max-w-[16rem] text-gray-800 dark:text-white',
     height = '100',
@@ -56,14 +52,14 @@
   {/if}
   <path
     d="M278 411H376.905H394C394 399.367 373.853 396.918 365.305 392.633C356.758 388.347 351.874 381 340.884 381C329.895 381 317.074 395.694 302.421 396.918C290.699 397.898 281.256 406.714 278 411Z"
-    fill={color3}
+    fill={color2}
     fill-opacity="0.6"
   />
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M168.026 452.826L184.979 389.558L186.91 390.076L169.958 453.344L168.026 452.826Z"
-    fill={color5}
+    fill={color3}
   />
   <path
     fill-rule="evenodd"
@@ -75,7 +71,7 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M214.386 396.738L215.461 398.425L178.779 421.802L198.858 460.388L197.084 461.311L176.159 421.1L214.386 396.738Z"
-    fill={color5}
+    fill={color3}
   />
   <path
     fill-rule="evenodd"
@@ -87,7 +83,7 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M157.854 381.591L156.08 382.514L176.159 421.1L139.477 444.477L140.552 446.164L178.779 421.802L157.854 381.591Z"
-    fill={color5}
+    fill={color3}
   />
   <path
     fill-rule="evenodd"
@@ -102,7 +98,7 @@
     height="19"
     rx="2"
     transform="rotate(15 175.033 411.222)"
-    fill={color2}
+    fill={color1}
   />
   <rect
     x="175.033"
@@ -117,7 +113,7 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
     d="M185.135 362.165L149.568 352.635L149.381 352.585L149.277 352.422C137.811 334.549 121.305 303.062 108.321 266.461C95.3383 229.866 86.0941 188.176 89.6654 150.043C94.1353 102.315 121.144 69.4602 157.326 51.3142C193.491 33.1765 238.817 29.7315 279.991 40.764C321.165 51.7965 358.695 77.4428 380.946 111.233C403.208 145.039 410.171 186.996 390.178 230.565C374.204 265.375 345.354 296.857 315.813 322.058C286.268 347.263 256.354 366.313 237.489 376.058L237.317 376.147L237.13 376.097L195.765 365.013L185.135 362.165Z"
-    fill={color5}
+    fill={color3}
   />
   <path
     fill-rule="evenodd"
@@ -127,7 +123,7 @@
   />
   <path
     d="M149.338 352.573C179.997 353.968 209.988 362.004 237.237 376.125L234.866 378.144C227.675 384.265 222.516 392.428 220.072 401.549L151.491 383.173C153.935 374.052 153.548 364.403 150.382 355.506L149.338 352.573Z"
-    fill={color5}
+    fill={color3}
   />
   <path
     d="M149.338 352.573C179.997 353.968 209.988 362.004 237.237 376.125L234.866 378.144C227.675 384.265 222.516 392.428 220.072 401.549L151.491 383.173C153.935 374.052 153.548 364.403 150.382 355.506L149.338 352.573Z"
@@ -137,7 +133,7 @@
     width="44"
     height="69"
     transform="matrix(-0.965926 -0.258819 -0.258819 0.965926 232.295 467.976)"
-    fill={color2}
+    fill={color1}
   />
   <rect
     width="44"
@@ -151,7 +147,7 @@
     width="80"
     height="69"
     transform="rotate(15 112.52 435.883)"
-    fill={color2}
+    fill={color1}
   />
   <rect
     x="111.826"
@@ -160,7 +156,7 @@
     height="19"
     rx="2"
     transform="rotate(15 111.826 477.108)"
-    fill={color6}
+    fill={color4}
   />
   <rect
     x="112.395"
@@ -169,11 +165,11 @@
     height="2"
     rx="1"
     transform="rotate(15 112.395 486.578)"
-    fill={color2}
+    fill={color1}
   />
   <path
     d="M204.283 460.471L216.84 463.835L213.734 475.426C213.449 476.493 212.352 477.127 211.285 476.841L202.592 474.511C201.525 474.225 200.891 473.129 201.177 472.062L204.283 460.471Z"
-    fill={color5}
+    fill={color3}
     fill-opacity="0.2"
   />
   <rect
@@ -183,11 +179,11 @@
     height="2"
     rx="1"
     transform="rotate(15 111.359 490.441)"
-    fill={color2}
+    fill={color1}
   />
   <path
     d="M116.5 39.5H35.5H21.5C21.5 30 38 28 45 24.5C52 21 56 15 65 15C74 15 84.5 27 96.5 28C106.1 28.8 113.833 36 116.5 39.5Z"
-    fill={color3}
+    fill={color2}
   />
   <defs>
     <linearGradient
